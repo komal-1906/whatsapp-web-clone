@@ -1,0 +1,679 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* --- NAVBAR --- */
+
+.container{
+    min-height: 100vh;
+    width: 100vw;
+    /* padding: 10px 40px; */
+    background-color: antiquewhite;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 40px;
+}
+ 
+.leftNav img{
+    height: 30px;
+    width: 128px;
+}
+
+.centerNav{
+    display: flex;
+    gap: 40px;
+}
+
+.centerNav span{
+    align-items: center;
+    justify-content: space-evenly;
+    font-size: 16px;
+}
+
+.centerNav span:hover{
+    cursor: pointer;
+}
+
+.feat{
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100px;
+    position: relative;
+    height: 2%;
+}
+
+.features{
+    position: relative;
+    display: flex;
+}
+
+.features::after{
+    content: '';
+    width: 100%;
+    height: 3px;
+    background-color: rgb(38, 212, 102);
+    position: absolute; 
+    bottom: 0;
+    transform: scaleX(0);
+    transition: all 0.5s ease-in-out;
+    transform-origin: left;
+}
+
+.features:hover::after{
+    transform: scaleX(1);
+}
+
+.features img{
+    rotate: -90deg;
+    width: 7px;
+    height: 15px;
+}
+
+.features img:hover{
+    cursor: pointer;
+}
+
+.rightNav{
+    display: flex;
+    gap: 20px;
+}
+
+.rightNav button{
+    position: relative;
+    border: none;
+    border: 1px solid black;
+    display: flex;  
+    padding: 15px 20px; 
+    border-radius: 40px;
+    gap: 10px;
+    font-size: 17px;  
+    font-weight: 600;
+    z-index: 1;
+    overflow: hidden;
+}
+
+.download::before{
+    border-radius: 80%;
+    scale: 1.5;
+    z-index: -1;
+    position: absolute;
+    content: "";
+    background-color: #1c1e21;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    transition: 0.5s 0.2s;
+    transform: translateX(-150px) translateY(60px);
+}
+
+.download:hover::before{
+    transform: translateX(-150px) translateY(0px);
+    opacity: 1;
+}
+
+.download:hover{
+    color: white;
+    transition: 0.5s 0.2s;
+}
+
+.download:hover img{
+    transition: 0.5s 0.2s;
+    filter: brightness(0) invert(1);
+}
+
+.rightNav button:hover{
+    cursor: pointer;
+}
+
+.login{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+}
+
+.login::before{
+    border-radius: 80%;
+    scale: 1.5;
+    z-index: -1;
+    position: absolute;
+    content: "";
+    background-color: #1c1e21;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    transition: 0.5s 0.2s;
+    transform: translateY(50px);
+}
+
+.login:hover::before{
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+.login:hover{
+    color: white;
+    transition: 0.5s 0.2s;
+}
+
+.login:hover img{
+    filter: brightness(0) invert(1);
+    transition: 0.5s 0.2s;
+}
+
+.login img{
+    rotate: 180deg;
+}
+
+.download{
+    width: 160px;
+    background-color: rgb(38, 212, 102);
+}
+
+.download p, .download img{
+    background: transparent;
+}
+
+/* --- FIRST SECTION --- */
+
+.maaBeti{
+    background-image: url(assets/MaaBeti.png);
+    background-repeat: no-repeat;
+    height: 95vh;
+    background-size: cover;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 20px;
+    overflow: hidden;
+    width: 100%;
+}
+
+.firstSection{
+    padding-top: 40px;
+    min-height: 90vh;
+    width: 100%;
+    padding: 10px 40px;
+}
+
+.float{
+    text-align: end;
+    font-size: 13px;
+    opacity: 0.8;
+    padding-top: 12px;
+}
+
+.right{
+    position: relative;
+    width: 40%;
+    overflow: hidden;
+}
+
+.right img:nth-child(1){
+    width: 100%;
+    position: absolute;
+    top: 5%;
+    animation: gm 0.5s ease-in-out;
+}
+
+@keyframes gm{
+    0%{
+        transform: translateY(50px);
+    }
+
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+.right img:nth-child(2){
+    width: 100%;
+    top: 10%;
+    position: absolute;
+    animation: dil 0.7s ease-in-out;
+}
+
+@keyframes dil{
+    0%{
+        opacity: 0;
+    }
+
+    75%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+.right img:nth-child(3){
+    width: 100%;
+    height: auto;
+    position: relative;
+    animation: cup 1.5s ease-in-out;
+}
+
+@keyframes cup{
+    0%{
+        transform: translateY(50px);
+        opacity: 0;
+    }
+
+    50%{
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+.right img:nth-child(4){
+    width: 100%;
+    height: auto;
+    animation: voice 2.5s ease-in-out;
+}
+
+@keyframes voice{
+    0%{
+        transform: translateY(50px);
+        opacity: 0;
+    }
+
+    50%{
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+.right img:nth-child(5){
+    width: 70%;
+    height: auto;
+    position: relative;
+    animation: emotion 3.0s ease-in-out;
+}
+
+@keyframes emotion{
+    0%{
+        transform: translateY(50px);
+        opacity: 0;
+    }
+
+    75%{
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+.right img:nth-child(6){
+    width: 100%;
+    position: relative;
+    top: -30px;
+    animation: emoji 3.5s ease-in-out;
+}
+
+@keyframes emoji{
+    0%{
+        opacity: 0;
+    }
+
+    75%{
+        opacity: 0;
+    }
+
+    100%{
+        opacity: 1;
+    }
+}
+
+.right img:nth-child(7){
+    width: 100%;
+    animation: msg 4s ease-in-out;
+}
+
+@keyframes msg{
+    0%{
+        transform: translateY(50px);
+        opacity: 0;
+    }
+
+    75%{
+        opacity: 0;
+    }
+
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+.text:hover{
+    cursor: pointer;
+    color: green;
+}
+
+.text:hover img{
+    filter: invert(35%) sepia(70%) saturate(500%) hue-rotate(90deg);
+}
+
+.leftMessage{
+    color: white;
+}
+
+.leftMessage h1{
+    color: white;
+    font-size: 80px;
+    font-weight: 200;
+}
+
+.left{
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+}
+
+.leftMessage p{
+    line-height: 1.6;
+}
+
+.btn{
+    gap: 50px;
+}
+
+/* --- Second Section --- */
+
+.secondSection{
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    overflow: hidden;
+}
+
+.secondSection img{
+    width: 90%;
+}
+
+.secondSection p{
+    text-align: center;
+    font-size: 2.7rem;
+    letter-spacing: -1px;
+    font-weight: 500;
+    line-height: 45px;
+    overflow: hidden;
+}
+
+/* --- Third Section --- */
+.thirdSection{
+    overflow: hidden;
+}
+.firstdiv{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 50px;
+    padding-top: 80px;
+}
+
+.firstdivLeft{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.firstdivLeft #heading{
+    overflow: hidden;
+    font-size: 3.8em;
+    line-height: 1;
+    font-weight: 500;
+}
+
+.firstdivLeft #para{
+    overflow: hidden;
+    font-size: 1.3em;
+    line-height: 1.2;
+}
+
+.firstdivLeft .text{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    position: relative;
+}
+
+.firstdivLeft .text p{
+    font-size: 1.2em;
+    border-bottom: 3px solid rgb(38, 212, 102);
+    padding-bottom: 2px;
+}
+
+.firstdivLeft .text img{
+    rotate: 180deg;
+    height: 15px;
+}
+
+#beach{
+    position: relative;
+}
+
+#beach img:nth-child(2){
+    position: absolute;
+    width: 300px;
+    right: 10%;
+    top: 40%;
+}
+
+#group{
+    position: relative;  
+}
+
+#group img:nth-child(2){
+    position: absolute;
+    width: 320px;
+    left: 7%;
+    top: 20%;
+}
+
+.encrypted{
+    background-color: #111b21;
+}
+
+.windows{
+    width: 270px;
+}
+
+.blue{
+    display: flex;
+    gap: 5px;
+}
+
+.blue p:nth-child(1){
+    color: white;
+}
+
+.blue p:nth-child(2){
+    color: rgb(38, 212, 102);
+}
+
+.blue p:nth-child(3){
+    color: white;
+    padding-top: 20px;
+    padding-bottom: 45px;
+}
+
+.specialarrow{
+    filter: invert(100%);
+}
+
+.tiltarrow{
+    transform: rotate(-180deg);
+}
+
+/* --- Last Section --- */
+
+.lastSection{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    height: 80vh;
+    background-color: #111b21;
+    justify-content: center;
+    align-items: center;
+}
+
+.upperlast{
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    align-items: center;
+    height: 60%;
+}
+
+.up1{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+    align-items: center;
+    padding-bottom: 50px;
+}
+
+.up2, .up3, .up4, .up5{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: left;
+    justify-content: space-around;
+    padding-bottom: 50px;
+}
+
+.firstline{
+    font-size: 14px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+ul{
+    font-size: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+ul li{
+    overflow: hidden;
+}
+
+ul li:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+hr{
+    width: 80%;
+    color: wheat;
+} 
+
+.lowerlast{
+    display: flex;
+    width: 80%;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 30px;
+}
+
+.lowerlast p{
+    font-size: 12px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.lowerimg img{
+    border: 1px solid white;
+    padding: 10px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50px;
+    background-color: #1c1e21;
+    margin-left: 30px;
+    justify-content: space-evenly;
+}
+
+.lowerimg img:hover{
+    cursor: pointer;
+    transition: 0.5s 0.2s;
+    background-color: rgb(38, 212, 102);
+    filter: background(0) invert(1);
+}
+
+.lowerlast p:hover{
+    cursor: pointer;
+}
+
+.lastbtn::before{
+    border-radius: 80%;
+    scale: 1.5;
+    z-index: -1;
+    position: absolute;
+    content: "";
+    background-color: white;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    transition: 0.5s 0.2s;
+    transform: translateY(50px);
+}
+
+.download:hover::before{
+    transform: translateY(0px);
+    opacity: 1;
+}
+
+.lastbtn:hover{
+    color: black;
+    transition: 0.5s 0.2s;
+}
+
+.lastbtn:hover img{
+    filter: brightness(1) invert(0);
+    transition: 0.5s 0.2s;
+}
+
+select{
+    padding: 18px 25px;
+    border: 1px solid white;
+    border-radius: 50px;
+    background-color: #111b21;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+}
+
